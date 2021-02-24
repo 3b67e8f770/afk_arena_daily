@@ -1,0 +1,99 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="zacznij_swords" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="525,788" sap2010:WorkflowViewState.IdRef="zacznij_swords_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="24">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="zacznij_swords" sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="zacznij" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WaitImageAppear DisplayName="Find Image zacznij" FoundElement="[zacznij]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+      <ui:WaitImageAppear.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.7" Profile="Basic" TargetImageBase64="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" />
+      </ui:WaitImageAppear.Image>
+      <ui:WaitImageAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bda5ff66-91b0-4d4c-9b28-8f6c56381f99" Selector="&lt;wnd app='bluestacks.exe' cls='HwndWrapper*' title='KeymapCanvasWindow' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:WaitImageAppear.Target>
+    </ui:WaitImageAppear>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click zacznij" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[zacznij]" Id="e5c373c1-e609-4a5a-862d-dc6e8b97df71">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+  </Sequence>
+</Activity>

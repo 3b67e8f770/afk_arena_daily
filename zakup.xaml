@@ -1,0 +1,111 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="zakup" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="544,788" sap2010:WorkflowViewState.IdRef="zakup_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="24">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="zakup" sap:VirtualizedContainerService.HintSize="376,289" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="zakup" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WaitImageAppear DisplayName="Find Image zakup" FoundElement="[zakup]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+      <ui:WaitImageAppear.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.7" Profile="Basic" TargetImageBase64="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" />
+      </ui:WaitImageAppear.Image>
+      <ui:WaitImageAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cc8d7adc-f1ec-478f-b985-e64b016d390b" Selector="&lt;wnd app='bluestacks.exe' cls='HwndWrapper*' title='KeymapCanvasWindow' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:WaitImageAppear.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WaitImageAppear>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click zakup" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[zakup]" Id="de6fc408-b177-4f9a-aad1-c823cf5f6ecc">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+  </Sequence>
+</Activity>
