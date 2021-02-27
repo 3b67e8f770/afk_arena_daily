@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="gildia" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="615,2073" sap2010:WorkflowViewState.IdRef="gildia_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="gildia" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="615,2280" sap2010:WorkflowViewState.IdRef="gildia_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
@@ -51,7 +51,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence Gildia" sap:VirtualizedContainerService.HintSize="625,2008" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Sequence Gildia" sap:VirtualizedContainerService.HintSize="625,2215" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="Gildia" />
       <Variable x:TypeArguments="ui:UiElement" Name="Polowanie" />
@@ -60,6 +60,7 @@
       <Variable x:TypeArguments="x:Boolean" Name="zniknie" />
       <Variable x:TypeArguments="x:Boolean" Name="szybka_bitwa" />
       <Variable x:TypeArguments="ui:UiElement" Name="zacznij" />
+      <Variable x:TypeArguments="ui:UiElement" Name="back" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -329,13 +330,31 @@
         </TryCatch>
       </If.Then>
     </If>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Back workflow" sap:VirtualizedContainerService.HintSize="583,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Back.xaml">
+    <ui:WaitImageAppear DisplayName="Find Image back" FoundElement="[back]" sap:VirtualizedContainerService.HintSize="583,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_4">
+      <ui:WaitImageAppear.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.7" Profile="Basic" TargetImageBase64="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" />
+      </ui:WaitImageAppear.Image>
+      <ui:WaitImageAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f8ab83ad-60a9-4f89-b5dc-f8d7d974c99d" Selector="&lt;wnd app='bluestacks.exe' cls='HwndWrapper*' title='BlueStacks' /&gt;" TimeoutMS="1000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:WaitImageAppear.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WaitImageAppear>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Back workflow" sap:VirtualizedContainerService.HintSize="583,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Back.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
